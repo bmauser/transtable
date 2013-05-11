@@ -18,8 +18,8 @@ foreach ($include_css_files as $css_file){
 
 </head>
 <body>
-
-<?php echo $page_content; ?>
-
+	<div id="transtable_inbody">
+		<?php echo $page_content; ?>
+	</div>
 </body>
 </html>

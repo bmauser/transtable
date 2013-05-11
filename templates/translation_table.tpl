@@ -57,7 +57,7 @@ foreach ($data[$folder]['translations'] as $_file_name => $_translations){
 
 
 <!-- table with translations -->
-<table border="0" cellpadding="2" cellspacing="5" id="transtable_table">
+<table width="100%" border="0" cellpadding="2" cellspacing="5" id="transtable_table">
 	
 	<?php 
 	$_row_index = 0;

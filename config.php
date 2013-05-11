@@ -3,44 +3,34 @@
  * Configuration.
  */
 
-// absolute filesystem path to folder with translation files
-$TTCFG['php_array_files']['root_dir'] = '/somefolder/translations'; // without / at the end
 
-// translation file name pattern
+// Absolute filesystem path to folder with translation files (you can organize files in subfolders)
+$TTCFG['php_array_files']['translations_root'] = '/my_translations'; // without / at the end
+
+// Translation file name pattern. Transtable will search for files matcing this pattern.
 $TTCFG['php_array_files']['file_name_pattern'] = '..\.php';
 
-// the name of the array that holds translations
+// The name of the PHP array that holds translations
 $TTCFG['php_array_files']['var_name'] = 't';
 
-// delimiter for translations from multi dimensional arrays
-$TTCFG['php_array_files']['array_delimiter'] = '|';
-
-// page title
+// Page title
 $TTCFG['php_array_files']['page_title'] = 'Transtable';
 
-// enable html editor
-$TTCFG['php_array_files']['enable_html_editor'] = 1;
-
-// enable editing indexes (first column)
+// Enable editing indexes (first column)
 $TTCFG['php_array_files']['enable_edit_index'] = 1;
 
-// enable deleting translations
+// Delimiter in translation index for multi dimensional arrays
+$TTCFG['php_array_files']['array_delimiter'] = '|';
+
+// Enable deleting translations
 $TTCFG['php_array_files']['enable_delete_translation'] = 1;
 
-// enable add a new translations
+// Enable add a new translations
 $TTCFG['php_array_files']['enable_add_translation'] = 1;
 
-// generated translation file newlines
+// Generated translation file newlines
 $TTCFG['php_array_files']['new_lines'] = PHP_EOL;
 
 // CSS files to include.
-//$TTCFG['include_css'][] = '';
-
-
-/**
- * Configuration file that will override settings in this file.
- */
-$config_override_path = dirname(__FILE__) . '/config_override.php';
-if(file_exists($config_override_path))
-	include_once $config_override_path;
+//$TTCFG['include_css'][] = 'css/mystyles.css';
 

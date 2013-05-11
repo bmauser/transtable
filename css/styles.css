@@ -2,7 +2,19 @@ body{
 	background-color: #666;
 	font-family: Arial, Helvetica, sans-serif;
 	font-size: 10pt;
-	margin: 5px;
+	position: relative;
+	display: block;
+	width: 100%;
+	right: 0px;
+	margin: 0px;
+	padding: 0px;
+}
+
+#transtable_inbody{
+	padding-top: 10px;
+	padding-right: 5px;
+	padding-bottom: 10px;
+	padding-left: 5px;
 }
 
 a{
@@ -12,15 +24,10 @@ a{
 a:hover{
 	text-decoration:underline;
 }
+
 a:visited{
 	text-decoration:none;
 }
-
-/*
-#transtable_table td{
-	height: 50px;
-}
-*/
 
 .transtable_hidden {
 	display: none;
@@ -85,13 +92,13 @@ a:visited{
 }
 
 .transtable_edit_div{
-	min-height: 50px;
-	min-width: 200px;
+	min-height: 40px;
+	min-width: 150px;
+	padding-top: 7px;
 }
 
 
-/* button 
-from: http://webdesignerwall.com/tutorials/css3-gradient-buttons */
+/* buttons from: http://webdesignerwall.com/tutorials/css3-gradient-buttons */
 .transtable_btt {
 	display: inline-block;
 	zoom: 1; /* zoom and *display = ie7 hack for display:inline-block */
@@ -150,16 +157,31 @@ from: http://webdesignerwall.com/tutorials/css3-gradient-buttons */
 }
 
 #transtable_sign {
-	float: right;
 	padding: 5px;
 	font-style: italic;
 	font-size: 8pt;
+	position: absolute;
+	right: 0;
+	z-index: -1;
 }
 
 #transtable_sign a{
 	color: #CCC;
 }
 
+.transtable_notice{
+	position: fixed;
+	padding: 10px;
+	font-size: 10pt;
+	right: 0px;
+	top: 0px;
+	background-color: #F00;
+	font-weight: bold;
+	color: #FFF;
+	-webkit-border-bottom-left-radius: 10px;
+	-moz-border-radius-bottomleft: 10px;
+	border-bottom-left-radius: 10px;
+}
 
 .transtable_btt_orange {
 	color: #fef4e9;
@@ -224,3 +246,14 @@ from: http://webdesignerwall.com/tutorials/css3-gradient-buttons */
 	filter:  progid:DXImageTransform.Microsoft.gradient(startColorstr='#0078a5', endColorstr='#00adee');
 }
 
+.cke_button__transtable_cleanhtml_icon{
+	background: url(clean_icon.png) no-repeat 0 0px !important;
+}
+
+.cke_button__transtable_save_icon{
+	background: url(save_icon.png) no-repeat 0 0px !important;
+}
+
+.cke_inner{
+	min-width: 460px !important;
+}

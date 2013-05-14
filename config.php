@@ -1,6 +1,7 @@
 <?php
 /**
- * Configuration.
+ * Transtable configuration.
+ * See documentation on: http://bojanmauser.from.hr/transtable/documentation/ for more details.
  */
 
 
@@ -33,4 +34,3 @@ $TTCFG['php_array_files']['new_lines'] = PHP_EOL;
 
 // CSS files to include.
 //$TTCFG['include_css'][] = 'css/mystyles.css';
-

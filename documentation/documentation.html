@@ -215,6 +215,8 @@ $t['main_title'] = 'My Site';<br />$t['main_subtitle'] = 'Some subtitle';<br />$
 		<ol>
 			<li>				<strong>Extract files from downloaded <a href="http://code.google.com/p/transtable/downloads/list">archive</a> to some folder accessible by web server</strong><br />
 				<br />
+				After that you can open web browser and navigate to URL where Transtable is installed and it should be working, you should see some sample translations.<br />
+				<br />
 			</li>
 			<li>			        <strong>Change configuration options and make an empty file for each language</strong><br />
 				<br />
@@ -222,6 +224,8 @@ $t['main_title'] = 'My Site';<br />$t['main_subtitle'] = 'Some subtitle';<br />$
 			<br />
 			Create an empty file for each language in directory set by <a href="#translations_root" class="insource">translations_root</a> option and name it to match  pattern set by <a href="#file_name_pattern"><span class="insource">file_name_pattern</span></a> option. For example <span class="insource">en.php</span>, <span class="insource">de.php</span>, <span class="insource">fr.php</span>.<br />
 			<br />
+			Note:  if you downoaded .zip archive there are three sample files (en.php, de.php, es.php) in the translations directory. You can delete them.<br />
+				<br />
 			</li>
 			<li>				<strong>Set file permissions			<br />
 				<br />
@@ -243,8 +247,8 @@ $t['main_title'] = 'My Site';<br />$t['main_subtitle'] = 'Some subtitle';<br />$
 			</tr>
 			<tr>
 				<td nowrap="nowrap" class="fp">translations_root<a name="translations_root" id="translations_root"></a></td>
-				<td align="center" class="insource">/neutralizations</td>
-				<td><strong>Absolute</strong> file system path to directory with translation files. You can  organize files in subdirectories.</td>
+				<td align="center" nowrap="nowrap" class="insource">/&lt;TRANSTABLE_ROOT&gt;/translations</td>
+				<td><strong>Absolute</strong> file system path to directory with translation files. You can  organize files in subdirectories. If you enter <span class="insource">&lt;TRANSTABLE_ROOT&gt;</span> it will be replaced with the absolute path to  the directory where Transtable is installed.</td>
 			</tr>
 			<tr>
 				<td nowrap="nowrap" class="fp">file_name_pattern<a name="file_name_pattern" id="file_name_pattern"></a></td>

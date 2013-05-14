@@ -10,7 +10,7 @@
  * http://www.opensource.org/licenses/mit-license.php
  *
  * @author Bojan Mauser <bmauser@gmail.com>
- * @version $Id: index.php 63 2013-05-11 21:23:11Z bmauser@gmail.com $
+ * @version $Id: index.php 70 2013-05-14 12:47:43Z bmauser@gmail.com $
  */
 
 
@@ -135,6 +135,8 @@ class transtable{
 			$this->config = $TTCFG['php_array_files'];
 		}
 
+		// replace <TRANSTABLE_ROOT> with TRANSTABLE_BASE_DIR
+		$this->config['translations_root'] = str_replace('<TRANSTABLE_ROOT>', TRANSTABLE_BASE_DIR, $this->config['translations_root']);
 		$this->config['translations_root'] = realpath($this->config['translations_root']);
 	}
 	

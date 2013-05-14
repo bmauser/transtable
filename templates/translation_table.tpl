@@ -134,6 +134,9 @@ foreach ($data[$folder]['translations'] as $_file_name => $_translations){
 		<?php if($enable_edit_index){ ?>
 		<li>Double click on the index to edit.</li>
 		<?php } ?>
+		<?php if($dont_write_file){ ?>
+		<li>NOTE: saving is disabled so when you refresh the page changes will be lost.</li>
+		<?php } ?>
 	</ul>
 </div>
 

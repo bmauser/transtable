@@ -64,6 +64,7 @@ try{
 			$dully->assign('enable_delete_translation', $TTCFG['php_array_files']['enable_delete_translation']);
 			$dully->assign('enable_add_translation', $TTCFG['php_array_files']['enable_add_translation']);
 			$dully->assign('include_css_files', @$TTCFG['include_css']);
+			$dully->assign('dont_write_file', @$TTCFG['php_array_files']['dont_write_file']);
 			$dully->assign('version', '0.1');
 		}
 		else

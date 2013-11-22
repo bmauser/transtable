@@ -1,13 +1,15 @@
 <?php
 /**
- * Configuration.
+ * Transtable configuration.
+ * See documentation on: http://bojanmauser.from.hr/transtable/documentation/ for more details.
  */
 
 
 // Absolute filesystem path to folder with translation files (you can organize files in subfolders)
-$TTCFG['php_array_files']['translations_root'] = '/my_translations'; // without / at the end
+// <TRANSTABLE_ROOT> will be replaced with full system path to Transtable directory.
+$TTCFG['php_array_files']['translations_root'] = '<TRANSTABLE_ROOT>/translations'; // without / at the end
 
-// Translation file name pattern. Transtable will search for files matcing this pattern.
+// Translation file name pattern. Transtable will search for files matching this pattern.
 $TTCFG['php_array_files']['file_name_pattern'] = '..\.php';
 
 // The name of the PHP array that holds translations
@@ -33,4 +35,3 @@ $TTCFG['php_array_files']['new_lines'] = PHP_EOL;
 
 // CSS files to include.
 //$TTCFG['include_css'][] = 'css/mystyles.css';
-

@@ -10,7 +10,7 @@
  * http://www.opensource.org/licenses/mit-license.php
  *
  * @author Bojan Mauser <bmauser@gmail.com>
- * @version $Id: index.php 63 2013-05-11 21:23:11Z bmauser@gmail.com $
+ * @version $Id: index.php 76 2013-11-21 18:11:36Z bmauser@gmail.com $
  */
 
 
@@ -64,6 +64,7 @@ try{
 			$dully->assign('enable_delete_translation', $TTCFG['php_array_files']['enable_delete_translation']);
 			$dully->assign('enable_add_translation', $TTCFG['php_array_files']['enable_add_translation']);
 			$dully->assign('include_css_files', @$TTCFG['include_css']);
+			$dully->assign('dont_write_file', @$TTCFG['php_array_files']['dont_write_file']);
 			$dully->assign('version', '0.1');
 		}
 		else
@@ -135,6 +136,8 @@ class transtable{
 			$this->config = $TTCFG['php_array_files'];
 		}
 
+		// replace <TRANSTABLE_ROOT> with TRANSTABLE_BASE_DIR
+		$this->config['translations_root'] = str_replace('<TRANSTABLE_ROOT>', TRANSTABLE_BASE_DIR, $this->config['translations_root']);
 		$this->config['translations_root'] = realpath($this->config['translations_root']);
 	}
 	
@@ -326,7 +329,7 @@ class transtable{
 		$file_content = $dully->fetch('translation_file.tpl');
 		
 		// normalize new lines
-		str_replace(array("\r\n","\r"), "\n", $file_content);
+		$file_content = str_replace(array("\r\n","\r"), "\n", $file_content);
 		if($this->config['new_lines'] != "\n")
 			$file_content = str_replace("\n", $this->config['new_lines'], $file_content);
 		
